@@ -7,3 +7,6 @@ Describe: Pizza.prototype.pizzaSize ()
 Test: "It should increase the default price("13") by 3 when choosing large"
 code: Pizza.prototype.pizzaSize ("large");
 Expected Output: '16'
+
+Describe: Pizza.prototype.calculatePrice ()
+Test: "It should add size price and topping price
