@@ -1,18 +1,28 @@
+// Business logic-----
 function Pizza(toppings, size, price) {
-  this.toppings = toppings; // make toppings empty array?
+  this.toppings = toppings; 
   this.size = size;
   this.price = price;
 }
-console.log('large');
-
 
 Pizza.prototype.pizzaSize = function () {
-  this.price = 13;
-  if (this.size === 'small') {
-    this.price -= 3;
-  } else (this.size === "large"); {
-    this.price += 3;
-  } return this.price
-} 
+  if (this.size === "small") {
+    let price = 10;
+    return this.price = price;
+    } if (this.size === "large") {  
+      let price = 16;
+      return this.price = price;
+    } if (this.size === "medium") { 
+      let price = 13;
+      return this.price = price;
+    } else {
+     return this.price;
+  }
+}
+
+
+
+
+
 
 
