@@ -1,5 +1,5 @@
 // Business logic-----
-function Pizza(toppings, size) {
+function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings; 
   
@@ -21,24 +21,13 @@ Pizza.prototype.pizzaPrice = function () {
 }
 
 
-// Pizza.prototype.toppingsCost = function() {
-//   let totalPrice = this.price + this.topping;
-//   if (this.topping <= 1) {
-//     totalPrice += 1;
-//   } else if (this.topping <= 2) {
-//     totalPrice += 2;
-//   } else if (this.topping <= 3) {
-//     totalPrice += 3;
-//   } else if (this.topping <=4) {
-//     totalPrice += 4;
-//   } else if (this.topping <= 5) {
-
-
 // UI logic-----
 
 $(document).ready(function() {
-  $("form#newPlayer").submit(function(event) {
+  $("form#pizza-toppings").submit(function(event) {
     event.preventDefault();
+
+
 
   })
 })
