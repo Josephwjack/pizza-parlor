@@ -5,10 +5,12 @@ function Pizza(toppings, size) {
   
 }
 let myPizza = new Pizza();
-Pizza.prototype.pizzaSize = function () {
+Pizza.prototype.pizzaPrice = function () {
   let price = 13;
   if (this.size === "small") {
     price -= 3;
+  } else if (this.size === "medium") {
+    price = 13;
   } else if (this.size === "large") {
     price += 3;  
   }
@@ -29,16 +31,17 @@ Pizza.prototype.pizzaSize = function () {
 //     totalPrice += 3;
 //   } else if (this.topping <=4) {
 //     totalPrice += 4;
-//   } else if (this.topping <= 5) { 
-//    totalPrice += 5;
-//   } 
-//   return totalPrice;
-let toppingArray = [];
+//   } else if (this.topping <= 5) {
 
 
 // UI logic-----
 
 $(document).ready(function() {
+  $("form#newPlayer").submit(function(event) {
+    event.preventDefault();
+
+  })
+})
 
 
 
