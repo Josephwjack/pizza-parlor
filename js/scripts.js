@@ -32,5 +32,8 @@ Pizza.prototype.pizzaSize = function () {
 
 // UI logic-----
 
+$(document).ready(function() {
+  
+
 
 
