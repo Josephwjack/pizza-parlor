@@ -13,27 +13,29 @@ Pizza.prototype.pizzaPrice = function () {
   } else if (this.size === "large") {
     price += 3;  
   }
-  this.toppings.forEach(() => {
-    price += 1;
+   
     return price;
-  })
-};
+  };
+
 
 // UI logic-----
 
 
 $(document).ready(function() {
-  $("#pizza-build").submit(function(event) {
+ $("#pizza-build").submit(function(event) {
   event.preventDefault();
   let inputtedSize = $("#size").val();
   let inputtedToppings = $("input:checkbox[name=pizza-toppings]:checked").val();
-  let usersPizza = new Pizza(inputtedSize, inputtedToppings);
-  $("#output").html(usersPizza.pizzaPrice());
+  let pizza = new Pizza(inputtedSize, inputtedToppings);
+  $("#output").text(pizza);
   $(".pizza-confirmation").show();
   $("#menu").show();
+  
+  $("#output").text('Thanks for ordering! Your,' + ', '+ inputtedSize
+   + ','+ inputtedToppings + ',$' + pizza.pizzaPrice())
+ })    
+})
 
-  })
-});
 
 
 
