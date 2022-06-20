@@ -1,9 +1,18 @@
-#pizza-confirmation {
+.pizza-confirmation {
   display: none;
 }
 
 .menu {
   display: none;
+}
+
+.click {
+  cursor: pointer;
+  color: #e8a405;
+}
+
+.click:hover {
+  text-decoration: underline;
 }
 
 

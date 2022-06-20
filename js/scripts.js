@@ -15,31 +15,28 @@ Pizza.prototype.pizzaPrice = function () {
   }
   this.toppings.forEach(() => {
     price += 1;
-    console.log(price);
-  });
-  return price;
-}
+    return price;
+  })
+};
 
 // UI logic-----
-let myPizza = new Pizza();
+
 
 $(document).ready(function() {
-  $("form#pizza-build").submit(function(event) {
-    event.preventDefault();
-
-    let inputtedSize = $(".form-control#size").val();
-    let inputtedToppings = $("input:checkbox[name=pizza-toppings]:checked").val();
-    let usersPizza = new Pizza(inputtedSize, inputtedToppings)
-    let output = usersPizza + price;
-    $("#output").html(output);
-    $("")
-  })
-$("#btn1").on("click", function(event) {
+  $("#pizza-build").submit(function(event) {
   event.preventDefault();
-  $("#menu").fadeIn();
-})
+  let inputtedSize = $("#size").val();
+  let inputtedToppings = $("input:checkbox[name=pizza-toppings]:checked").val();
+  let usersPizza = new Pizza(inputtedSize, inputtedToppings);
+  $("#output").html(usersPizza.pizzaPrice());
+  $(".pizza-confirmation").show();
+  $("#menu").show();
 
   })
+});
+
+
+
 
 
 
