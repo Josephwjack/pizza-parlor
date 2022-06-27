@@ -1,54 +1,35 @@
-// Business logic-----
+
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings; 
-  
 }
+let newPizza = new Pizza();
+
 Pizza.prototype.pizzaPrice = function () {
-  let price = 13;
+  this.price = 13;
   if (this.size === "small") {
-    price -= 3;
+    this.price -= 3;
   } else if (this.size === "medium") {
-    price = 13;
+    this.price = 13;
   } else if (this.size === "large") {
-    price += 3;  
-  } else {
-
-    return price;
+    this.price += 3;  
+  }
+  return toppingPrice + this.price;
 }
-
-
-
-// UI logic-----
-
-
+$("input:checkbox").click(function() {
+    
+  
+  
+  // UI logic-----
+ 
+  
+  let toppingHolder = [];
+  let topPrice = 0;
+  let tops = [];
+}
 $(document).ready(function() {
   $("#pizza-build").submit(function(event) {
-   event.preventDefault();
-   let inputtedSize = $("#size").val();
-   let inputtedToppings = $("input:checkbox[name=pizza-toppings]:checked").val();
-   let pizza = new Pizza(inputtedSize, inputtedToppings);
-   $("#output").text(pizza);
-   $(".pizza-confirmation").show();
-   $("#menu").show();
-   
-   $("#output").text('Thanks for ordering! Your,' + ', '+ inputtedSize
-    + ','+ inputtedToppings + ',$' + pizza.pizzaPrice())
-  })    
- })
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    event.preventDefault();
+    
+  })
+})
